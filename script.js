@@ -198,13 +198,20 @@ var r = 0,
 g = 0,
 b = 0;
 
-easter_egg_on = 0;
 function easter_egg(key){
 	if(key.keyCode == "220"){
 			var elems = document.querySelector('html');
 			document.getElementById("html").style.backgroundImage = 'none';
-		    easter_egg_on = 1;
-			stop = rainbow(elems);
+			const randomRGB = (min, max) => min + Math.floor(Math.random() * (max - min + 1));
+			r = randomRGB(0, 255);
+			g = randomRGB(0, 255);
+			b = randomRGB(0, 255);
+			try{
+				rainbow(elems);
+			}
+			catch(err){
+				alert('Error loading the easter egg. Error code: ' + err.message);
+			}
 	}
 }
 
@@ -216,7 +223,13 @@ function rainbow(elems){
 		if (r == 0 && b == 255 && g > 0)  g--;
 		if (r == 0 && g == 0 && b > 0) b--;
 		var timer = setTimeout(function() {
-			rainbow(elems);
+			try{
+			   rainbow(elems);
+			}
+			catch(err){
+				alert('Error continuing the easter egg. Error code: ' + err.message);
+				return;
+			}
 		}, 100);
 		elems.style.backgroundColor = 'rgb('+r+','+g+','+b+')';
 }
