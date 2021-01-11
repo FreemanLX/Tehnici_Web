@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html id ="html" lang="en">
+
+
+<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+        <title> Andreas </title>
+        <link rel="stylesheet" href="css.css">
+</head>
+
+<script src="script.js"> </script>
+
+<body id = "corp"> 
+
+
+<div id = "navbar_p" class = "navbar">
+  <div class = "subnav">
+     <button class="subnavbutton" onclick="hide_home();">Home</button>
+  </div>
+  
+  <div class = "subnav">
+       <button class="subnavbutton" onclick="about();">About</button>
+  </div>
+  <div class = "subnav">
+	   <button class="subnavbutton" onclick="contact_form();">Contact</button>
+  </div>
+  <div class = "subnav">   
+	  <button class="subnavbutton">My CV <i class="fa fa-caret-down"></i></button>
+	   <div class = "subnav-content">
+				<div class = "subnav">        
+							<button class="subnavbutton" onclick="hide_myprojects();">Projects</button>
+				</div>
+				<div class = "subnav">
+							<button class="subnavbutton" onclick="hide_edexp();">Education</button>
+				</div>
+				<div class = "subnav">
+							<button class="subnavbutton" onclick="hide_wexp();">Work Experience</button>
+				</div>
+       </div>
+   </div>
+ 
+ 
+</div>
+
+
+
+<div id="home">
+<br><br><br>
+   <h1 class="align">Welcome to the website</h1>
+<br><br><br>
+<div class="grid">
+<div class="grid_photo">
+            <h2>Contact</h2>
+			<ul class="align">
+			<li>&#9742; +40 784245722</li>
+			<li>&#128233; <a target="_blank" rel="noopener noreferrer" href="mailto:andreasmihalea@gmail.com">andreasmihalea@gmail.com</a></li>
+			<li>&#128233; <a target="_blank" rel="noopener noreferrer" href="mailto:andreas.mihalea@s.unibuc.ro">andreas.mihalea@s.unibuc.ro</a></li>
+			<li>&#128233; <a target="_blank" rel="noopener noreferrer" href="mailto:andreas.mihalea@my.fmi.unibuc.ro">andreas.mihalea@my.fmi.unibuc.ro</a></li>
+			<li class = "photo"><a target="_blank" rel="noopener noreferrer" href ="https://www.linkedin.com/in/andreas-mihalea/"><img src = "https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/LinkedIn_logo_In-Black.svg/1200px-LinkedIn_logo_In-Black.svg.png" alt = "linkedin" height = "50" width = "50" /></a>&nbsp; &nbsp; <a href = "https://facebook.com/andreas.mihalea.16"><img src="https://i.imgur.com/K6gCTYH.png" alt="fb" height = "50" width = "50"/></a>&nbsp; &nbsp; <a href = "https://github.com/FreemanLX"> <img src = "https://i.imgur.com/ep2fqSD.png" alt = "github" height = "50" width ="50"/></a></li> 
+			</ul>
+			<br>
+</div>
+
+<div class = "grid_about">
+	        <h2>General infomations</h2>
+			<ul class="align">
+			<li><b>Name:</b> Mihalea Andreas</li>
+			<li><b>Date of Birth:</b> 16.10.1999</li>
+			<li><b>Address:</b> Sperantei Street, 32 – 34, Bragadiru (Romania)</li>
+			<li><b>Status:</b> Student at Faculty of Mathematics and Computer Science</li>
+			</ul>
+			<br><br>
+</div>
+
+
+
+</div>
+</div>
+
+
+<div id = "projects" style="display:none">
+    <br><br><br>
+    <h1 class = 'align'>Here you will see my projects during the time</h1><br><br><br>
+    <table class ="talign">
+       <tr>
+	      <th> Projects </th>
+		  <th> Link </th>
+        </tr>
+		<tr>
+		  <td> 
+		   <h3>IntegrateOS</h3>
+		   <p>Description: A method to install every OS on every computer</p>
+           <p>The idea: I want to install any OS in every computer (including Raspberry PI)</p>
+		   </td>
+		  <td> <a target="_blank" rel="noopener noreferrer" href="http://github.com/FreemanLX/IntegrateOS"> <img src = "https://i.imgur.com/ep2fqSD.png" alt = "integrateos" height = "50" width ="50"/> </a> </td>
+		</tr>
+		<tr>
+		   <td>
+		   <h3>CloudOS</h3>
+			   <p>Description: A method to import files and save them in the cloud using IIS 10</p>
+		           <p>Requirements: You need to run it on Windows Server</p> 
+		   </td>
+		   <td><a target="_blank" rel="noopener noreferrer" href="http://github.com/FreemanLX/CloudOS"> <img src = "https://i.imgur.com/ep2fqSD.png" alt = "cloudos" height = "50" width ="50"/> </a> </td>
+		</tr>
+       <tr>
+		   <td>
+		   <h3>Launcher San Andreas Multiplayer</h3>
+		   <p>Description: A new launcher for GTA San Andreas Multiplayer. </p>
+		   </td>
+		   <td><a target="_blank" rel="noopener noreferrer" href="http://github.com/FreemanLX/NeoSAMP"> <img src = "https://i.imgur.com/ep2fqSD.png" alt = "neosamp" height = "50" width ="50"/> </a> </td>
+		</tr>
+	    <tr>
+		   <td>
+		   <h3>Matlab school projects</h3>
+		   <p>Description: School projects programmed in matlab.</p>
+		   <p>Requirements: You need to run on Windows 7+</p> 
+		   </td>
+		   <td><p><a target="_blank" rel="noopener noreferrer" href="https://github.com/FreemanLX/Rezolvare-analiza"> <img src = "https://i.imgur.com/ep2fqSD.png" alt = "rezolvarea" height = "50" width ="50"/> </a></p> 
+		       <p><a target="_blank" rel="noopener noreferrer" href="https://github.com/FreemanLX/MATLAB-Projects-2018-2019"> <img src = "https://i.imgur.com/ep2fqSD.png" alt = "matlab" height = "50" width ="50"/> </a></p>
+		   </td>
+		</tr>
+    </table>    
+    <br>
+	<br>
+	<br>
+
+
+</div>
+
+<div id = "education" style="display:none">
+      <br><br><br>
+    <h1 class = "align">Here you will see my school history</h1><br><br><br>
+    <table class ="talign">
+       <tr>
+	      <th> Number </th>
+	      <th> Schools and Certificates </th>
+		  <th> Profile </th>
+		  <th> Period </th>
+		  <th> Score </th>
+		  <th>  Link </th>
+        </tr>
+		<tr>
+		  <td>1</td>
+		  <td> Faculty of Mathematics and Computer Science. University of Bucharest
+		   </td>
+           <td>(BSC) Mathematics and Computer Science</td>
+		   <td>2018 - 2021</td>
+		   <td>(GPA) 7.5 / 10 </td>
+		  <td> <a target="_blank" rel="noopener noreferrer" href="http://fmi.unibuc.ro"> <img src = "https://i.imgur.com/i6jmRjh.jpg" alt="fmiunibuc" height = "50" width ="50"/> </a> </td>
+		</tr>
+		<tr>
+		   <td>2</td>
+		   <td>National College "Dimitrie Cantemir" Onesti</td>
+		   <td>Mathematics and Computer Science</td> 
+		   <td>2014 - 2018</td>
+		   <td>(GPA) 8.85 / 10</td>
+		   </td>
+		   <td><a target="_blank" rel="noopener noreferrer" href="http://dcantemir.ro"> <img src = "https://i.imgur.com/4ZIFqGw.jpg" alt = "dcantemir" height = "50" width ="50"/> </a> </td>
+		</tr>
+		<tr>
+		   <td>3</td>
+		   <td>Volunteer Appreciation Certificate</td>
+		   <td>Volunteer</td>
+		   <td>2014 - 2018</td>
+		   <td> - </td>
+		   <td><a target="_blank" rel="noopener noreferrer" href="http://dcantemir.ro"> <img src = "https://i.imgur.com/4ZIFqGw.jpg" alt = "dcantemir" height = "50" width ="50"/> </a> </td>
+		</tr>
+	    <tr>
+		   <td>4</td>
+		   <td>IELTS (International English Language Testing System)</td>
+		   <td>IELTS Academic</td>
+		   <td>2018</td>
+		   <td>5.5 / 9.0 (B2)</td>
+		   <td><p><a target="_blank" rel="noopener noreferrer" href="https://ielts.com"> <img src = "https://i.imgur.com/bwuuVp3.png" alt="ielts" height = "50" width ="50"/> </a></p> 
+		   </td>
+		</tr>
+		<tr>
+		   <td>5</td>
+		   <td>CISCO IT Essentials</td>
+		   <td>IT</td>
+		   <td>2016 - 2017</td>
+		   <td>-</td>
+		   <td><a target="_blank" rel="noopener noreferrer" href="http://netacad.com"> <img src = "https://i.imgur.com/Tef7TPj.png" alt="ecdl" height = "50" width ="50"/> </a> </td>
+		</tr>
+		<tr>
+		   <td>6</td>
+		   <td>ECDL (European Computer Driving Licence)</td>
+		   <td>ECDL Standard</td>
+		   <td>2015 - 2016</td>
+		   <td>-</td>
+		   <td><a target="_blank" rel="noopener noreferrer" href="http://ecdl.com"> <img src = "https://i.imgur.com/K1OdOQz.png" alt="ecdl" height = "50" width ="50"/> </a> </td>
+		</tr>
+       
+
+
+    </table>   
+    <br>
+	<br>
+	<br>
+</div>
+
+
+<div id = "work" style="display:none">
+<br><br><br>
+<h1 class = "align">Here you will see my work history</h1><br><br><br>
+<table class ="talign">
+    <tr>
+	      <th>Work Experience</th>
+		  <th>Contact</th>
+        </tr>
+		<tr>
+		  <td> 
+		   <h3>Junior System Administrator</h3>
+		   <p><b>July 2020 - October 2020</b></p>
+		   <p><b>My activity:</b></p>
+		   <ul class = "align">
+			<li> Installed and configured new hardware and software to some computers. </li>
+			<li> Answered technical queries and assisted users. </li>
+			<li> Ensured that the network infrastructure is up and running. </li>
+			<li> Maintained the email server (euromedics.ro), updated the emails password every month, added or removed some emails if it was necessary. </li>
+			<li> Monitored and maintained updated virus protection software, and backup data for emergency recovery and installed Bitdefender up to 20 device (included mobile). </li>
+			<li> Updated every month, the server password. </li>
+			<li> Mainteined the door system (software) using ZKTeco Access System, and reported the situation of the hardware. </li>
+			<li> Mainteined the CCTY system (software) using Dahua Smart PSS. </li>
+			<li> Mainteined and checked the server utilization. </li>
+			<li> Checked every day the telephone exchange and solved small problems if it was. </li>
+           </ul>		   
+		   </td>
+		  <td> <p> <a target="_blank" rel="noopener noreferrer" href="http://euromedics.ro"> Euromedics </a> </p>
+		       <p> Contact email:</p>
+               <p> <b>The Computer Department's email:</b> computer@euromedics.ro  </p>
+			   <p> <b>General email:</b> office@euromedics.ro </p>
+		     </td>
+		</tr>
+</table>
+    <br>
+	<br>
+	<br>
+
+</div>
+
+<div id = "contact" style = "display:none">
+<br><br><br>
+<h1 class = "align">Contact Mihalea Andreas</h1><br><br><br>
+   <form enctype="multipart/form-data" name = "form_t" method="post" action="/post" onsubmit="return verify();">
+        
+		<div class="form_left"> <label for="fname">First Name</label></div>
+		
+	    <div class ="form_right"><input type="text" id="fname" name="firstname" placeholder="Your name"></div>
+		
+		<div class="form_left"> <label for="lname">Last Name</label> </div>
+		
+		<div class ="form_right"> <input type="text" id="lname" name="lastname" placeholder="Your last name"> </div>
+		
+		<div class="form_left"> <label for="country">Country</label> </div>
+		
+		<div class ="form_right"> <input type="text" id="country" name="scountry" placeholder="Select the country"> </div>
+		
+	    <div class="form_left"> <label for="telephone">Telephone</label> </div>
+		
+		<div class ="form_right"> <input type="text" id="telephone" name="stelephone" placeholder="Write you telephone number with you country code"> </div>
+		
+		<div class="form_left"> <label for="email">Email</label> </div>
+		
+		<div class ="form_right"> <input type="text" id="email" name="semail" placeholder="Your email"> </div>
+		
+		<div class="form_left"> <label for="subject">Subject</label> </div>
+		
+		<div class ="form_right"> <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea> </div>
+		
+		<input type="checkbox" id="condition" name="condition" value="true">
+        <label for="condition">I agree with the data collection (GDPR)</label><br>
+		
+		<div class ="form_right"> <input type="submit" value="Submit"> </div>
+   </form>
+</div>
+
+<div id = "about" style = "display:none">
+   <br><br><br>
+   <h1 class = "align">About Andreas</h1>
+   <br><br><br>
+   
+<table class ="talign"> 
+    <tr>
+	      <td> 
+		       <ul class="align">
+				   <li>I'm a computer enthusiast who wants to learn all new kinds of technology, from programming to technical and operating systems. </li>
+				   <li>I have knowledge in programming such as: C++, C#, C, MATLAB, Batch (Windows) and Bash.</li>
+				   <li>As well as, in operating systems, programs, and in hardware, specially in large computers and laptops.</li>
+		      </ul>
+		  </td>
+    </tr>	
+
+</table>
+  
+ <br><br><br>
+ <h1 class="align">About this website</h1>
+ <br><br><br>
+   
+<table class ="talign">
+    <tr>
+	      <td> 
+		       <ul class = "align">
+		       <li>This website was build in 8 hours, from scratch using notepad++ and imgur for pictures.</li>
+		       <li><b>All the icons putted in this site, were used for a school project or knowledge about Andreas and his history. All rights reserved for those who made it.</b></li>
+			   <li><b class="type">My thanks to: </b> StackOverflow <b> and </b> W3Schools <b> for providing quality solutions in realization of this website.</b></li>
+			   </ul>
+			   <br>
+			   <br>
+			   <p><b>(C) Andreas Mihalea. All Rights reserved</b></p>
+		  </td>
+    </tr>	
+
+</table>
+
+</div>
+
+
+<div id = "data" class = "absolute">
+         <h3 id="date"></h3>
+		 <script> update() </script>
+</div>
+
+</body>
+
+
+<script type="text/javascript">
+   detect_OS_and_prepare();
+</script>
+
+
+
+</html>

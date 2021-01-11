@@ -1,0 +1,471 @@
+
+
+table, th, td {
+  font-family: Segoe UI;
+  color:black;
+  border: 0.1px solid black;
+  border-collapse: collapse;
+  text-align: center; 
+  text-shadow: none;
+  font-size:15px;
+  background: #EBF1FF;
+  opacity: 0.85;
+}
+
+
+input[type=text], textarea{
+	font-family: Segoe UI;
+	font-size:15px;
+	width: 80%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+
+.form_left {
+  float: left;
+  width: 10%;
+  margin-top: 6px;
+}
+
+.form_right {
+  float: left;
+  width: 90%;
+  margin-top: 6px;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+  font-size:15px;
+}
+
+@keyframes fadeIn {
+   from {opacity: 0} 
+   to {opacity: 1}
+}
+
+@keyframes fadeOut {
+   from {opacity: 1} 
+   to {opacity: 0}
+}
+
+
+form {
+  border-radius: 5px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+
+input[type=submit] {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+
+th {
+   font-size:20px;
+}
+
+table {
+  width: 70%;
+  height: 60%;
+}
+
+.talign{
+   margin-left: auto;
+   margin-right: auto;
+}
+
+body {
+  font-family: Segoe UI;
+  color: #EBF1FF;
+  text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;  
+  
+}
+
+
+
+.navbar {
+  overflow: hidden;
+  display: overflow;
+  background-color: #EBF1FF; 
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+
+.subnav {
+  float: left;
+  overflow: hidden;
+}
+
+.subnav .subnavbutton {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: black;
+  padding: 14px 16px;
+  background-color: #EBF1FF;
+  font-family: Segoe UI;
+  margin: 0;
+}
+
+.navbar a:hover, .subnav:hover .subnavbutton {
+  background-color: white;
+}
+
+.subnav-content {
+  display: none;
+  position: absolute;
+  left: 0;
+  background-color: #EBF1FF;
+  width: 100%;
+  z-index: 1;
+}
+
+.subnav-content a {
+  float: left;
+  color: black;
+  text-decoration: none;
+}
+
+.subnav-content a:hover {
+  background-color: #EBF1FF;
+  color: black;
+}
+
+.subnav:hover .subnav-content {
+  display: block;
+}
+
+div.absolute {
+  position: fixed;
+  bottom: 10px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0 auto;
+}
+
+
+
+html { 
+        background: url('https://i.imgur.com/T14Nz4k.jpg') no-repeat center fixed, linear-gradient(
+          rgba(0, 0, 0, 0.7), 
+          rgba(0, 0, 0, 0.7)
+        ); 
+        background-size: cover;
+}
+
+
+@media screen and (max-width:640px)
+{	
+		 .form_left, .form_right {
+			float: left;
+			width: 100%;
+			margin-top: 6px;
+	    }
+		 
+		 .grid
+		{
+			display: grid;
+			grid-template-columns: 50% 50%;
+		}
+
+		.grid_photo
+		{
+			grid-column: span 1/2;
+		}
+
+		.grid_about
+		{
+			grid-column: span 1/3;
+		}
+
+		.grid_photo .grid_about
+		{
+			opacity: 0.85;
+			background: #EBF1FF;
+			color: black;
+			text-shadow: none;
+			border-collapse:collapse;
+			border-top: 1px solid black;
+			border-left: 1px solid black;
+			text-align: center;
+		}
+
+		table 
+		{
+			width: 100%;
+			height: 100%;
+			font-size: 18px;
+		}
+		
+		.popup{
+			
+				width: 100%;
+	            height: 60%;
+			
+		}
+		
+		div.absolute{
+			display: none;
+				
+		}
+
+}
+
+
+
+
+@media screen and (max-width: 768px){
+   .form_left, .form_right {
+	   float: left;
+	   width: 100%;
+	   margin-top: 6px;
+   }
+  
+  table {
+	width: 100%;
+	height: 100%;
+	font-size: 30px;
+  }
+  
+  .grid{
+    display: grid;
+    grid-template-columns: 100%;
+}
+  
+ .grid_photo{
+    grid-column: span 1/2;
+	opacity: 0.85;
+    background: #EBF1FF;
+    color: black;
+    text-shadow: none;
+	border-collapse:collapse;
+	border-top: 1px solid black;
+	border-left: 1px solid black;
+	text-align: center;
+}
+
+
+
+ .grid_about{
+    grid-column: span 1/2;
+	opacity: 0.85;
+    background: #EBF1FF;
+    color: black;
+    text-shadow: none;
+	border-collapse:collapse;
+	border-top: 1px solid black;
+	border-left: 1px solid black;
+	text-align: center;
+}
+
+ 	.popup{	
+		width: 100%;
+	    height: 60%;
+	}
+		
+    div.absolute{
+			display: none;
+				
+	}	
+
+
+}
+
+@media screen and (max-width:939px){
+	.form_left, .form_right {
+	   float: left;
+	   width: 100%;
+	   margin-top: 6px;
+   }
+	
+}
+
+@media screen and (min-width:768px) and (max-width: 1280px){
+	 .grid{
+		display: grid;
+		grid-template-columns: 50% 50%;
+	}
+
+	.grid_photo{
+		grid-column: span 1/2;
+		opacity: 0.85;
+		background: #EBF1FF;
+		color: black;
+		text-shadow: none;
+		border-collapse:collapse;
+		border-top: 1px solid black;
+		border-left: 1px solid black;
+		text-align: center;
+	}
+
+	.popup{	
+		width: 50%;
+	    height: 70%;
+	}
+
+	 .grid_about{
+		grid-column: span 1/3;
+		opacity: 0.85;
+		background: #EBF1FF;
+		color: black;
+		text-shadow: none;
+		border-collapse:collapse;
+		border-top: 1px solid black;
+		border-left: 1px solid black;
+		text-align: center;
+	}
+
+	div.absolute{
+			display: none;				
+	}	
+
+	table {
+		width: 100%;
+		height: 100%;
+		font-size: 18px;
+	}
+
+}
+
+@media screen and (min-width:1280px) and (max-height:900px){
+	
+	
+	.popup{	
+		width: 50%;
+	    height: 70%;
+	}
+	div.absolute{
+			display: none;
+				
+	}	
+	
+}
+
+@media screen and (min-width:1280px){
+  .grid{
+    display: grid;
+    grid-template-columns: 20% 30% 30% 20%;
+	grid-gap:10px;
+	padding:10px;
+}
+
+.grid_about{
+    grid-column: span 1/4;
+}
+
+
+.grid_photo{
+    grid-column: span 1/3;
+}
+
+.grid_photo, .grid_about{
+    opacity: 0.85;
+    background: #EBF1FF;
+    color: black;
+    text-shadow: none;
+	border-collapse:collapse;
+	border-top: 1px solid black;
+	border-left: 1px solid black;
+    text-align: center;
+}
+
+.popup{	
+		width: 50%;
+	    height: 60%;
+	}
+
+}
+
+@media screen and (min-width:2560px){
+	.popup{	
+		width: 50%;
+	    height: 30%;
+	}
+	
+}
+
+button.align{
+	  margin: 0;
+	  position: absolute;
+	  left: 50%;
+      transform: translate(-50%, -10%);
+	  background: #EBF1FF;
+	  color: black;
+	  padding: 15px 32px;
+	  text-align: center;
+      text-decoration: none;
+      display: inline-block;
+}
+
+p.align{
+	text-align: center;
+	text-shadow: none;
+	color: black;
+}
+
+p.align_white{
+    text-align: center;
+	text-shadow: none;
+    color: black;	
+    font-size: 15px;
+}
+
+h3.align{
+	text-align: center;
+}
+
+h1.align{
+   text-align: center;
+}
+
+ul.align{
+	text-align: left;
+}
+
+li{
+    margin-top: 10px;
+	list-style-type: none;
+}
+
+li:first-child {
+    margin-top:0;
+}
+
+li.photo:last-child{
+	margin-top: 20px;
+}
+
+.new_font_windows{
+	font-family: Segoe UI;
+}
+
+.new_font_linux{
+	font-family: sans-serif;
+}
+
+.new_font_apple_chrome{
+	font-family: BlinkMacSystemFont;
+}
+
+.new font_apple{
+	font-family: -apple-system;
+}
