@@ -13,15 +13,20 @@ app.post('/post', function(req, res){
 	var subiect = 'Nume: ' + req.body.fname + 'Prenume: ' + req.body.lname; 
 	subiect.concat(req.body.fname, ' ', req.body.lname);
 	var mesaj = concat(req.body.subject, '\\n Email :', req.body.semail, '\\n Country :', req.body.scountry, '\\n Telephone :', req.body.telephone);
+	try{
 	var transporter = nodemailer.createTransport({   
 	  service: 'gmail',
 	  auth: {
 		user: 'email@gmail.com',
 		pass: ''
 	  }
-	  tls:{rejectUnauthorized:false}
+	  tls:{rejectUnauthorized:true}
 
 	});
+	}
+	catch(err){
+		Alert('Error sending email. HTML Code: ' + err.message);
+	}
 
 	var mailOptions = {             
 	  from: 'andreasmihalea@gmail.com',
