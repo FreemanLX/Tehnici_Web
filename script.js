@@ -1,3 +1,7 @@
+update();
+detect_OS_and_prepare();
+
+
 function round_type(ex){
 		if(ex < 10)
 			 return '0' + ex;
@@ -193,6 +197,32 @@ function detect_OS_and_prepare(){
    localStorage.clear();	
 }
 
+function isIE10older(){
+    if (window.navigator.userAgent.indexOf('MSIE ') > 0) {
+	        return true;
+	}
+	return false;
+}
+
+function isIE11(){
+    if (window.navigator.userAgent.indexOf('Trident/') > 0) {
+	        return true;
+	}
+	return false;
+}
+
+function isEdge_nochr(){
+	if (window.navigator.userAgent.indexOf('Edge/') > 0) {
+	        return true;
+	}
+	return false;
+}
+
+
+function randomRGB_gen(min, max){
+	  return min + Math.floor(Math.random() * (max - min + 1));
+}
+
 
 var r = 0,
 g = 0,
@@ -202,10 +232,27 @@ function easter_egg(key){
 	if(key.keyCode == "220"){
 			var elems = document.querySelector('html');
 			document.getElementById("html").style.backgroundImage = 'none';
-			const randomRGB = (min, max) => min + Math.floor(Math.random() * (max - min + 1));
-			r = randomRGB(0, 255);
-			g = randomRGB(0, 255);
-			b = randomRGB(0, 255);
+			if(isIE10older == true || isIE11 == true){
+				r = randomRGB_gen(0, 255);
+				g = randomRGB_gen(0, 255);
+				b = randomRGB_gen(0, 255);
+			}
+			else{
+				try{
+				   const randomRGB = (min, max) => min + Math.floor(Math.random() * (max - min + 1));
+				   r = randomRGB(0, 255);
+				   g = randomRGB(0, 255);
+				   b = randomRGB(0, 255);
+				}
+				catch(err){
+					  if(isIE10older == true || isIE11 == true){
+						  			///we are still on ie11, just to not see the upperhanding code
+					  }
+					  else{
+						  alert('Error generating the colors. Error code: ' + err.message);
+					  }
+				}
+			}
 			try{
 				rainbow(elems);
 			}
