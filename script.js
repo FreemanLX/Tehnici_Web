@@ -147,18 +147,32 @@ function font_not_installed_do(font){
 			      if(window.document.documentMode){
 			          elems[i].addEventListener('', change_font_target, null);
 				  }
-                  else{
-					  if(font == "Segoe UI"){
-					     elems[i].classList.add("new_font_windows");
-					  }
-					  if(font == "BlinkMacSystemFont"){
-						 elems[i].classList.add("new_font_apple_chrome"); 
-					  }
-					  if(font == "-apple-system"){
-						 elems[i].classList.add("new_font_apple"); 				  
-					  }
-					  if(font == "sans-serif"){
-						 elems[i].classList.add("new_font_linux");
+                  else
+				  {
+					  
+					  switch(font){
+						  
+						  case "Segoe UI": 
+						     elems[i].classList.add("new_font_windows");
+							 break;
+							 
+						  case "BlinkMacSystemFont":
+						     elems[i].classList.add("new_font_apple_chrome"); 
+                             break;
+
+                          case 	"-apple-system":
+						     elems[i].classList.add("new_font_apple");
+							 break;
+							 
+						  case  "sans-serif":	 
+						     elems[i].classList.add("new_font_linux");
+                             break;
+ 
+                          default:
+						     elems[i].classList.add("new_font_windows");
+                             break;						  
+						  
+						    
 					  }
 					  
 				  }				  
@@ -223,15 +237,12 @@ function randomRGB_gen(min, max){
 	  return min + Math.floor(Math.random() * (max - min + 1));
 }
 
-
 var r = 0,
 g = 0,
 b = 0;
 
-function easter_egg(key){
-	if(key.keyCode == "220"){
-			var elems = document.querySelector('html');
-			document.getElementById("html").style.backgroundImage = 'none';
+
+async function set_color(){
 			if(isIE10older == true || isIE11 == true){
 				r = randomRGB_gen(0, 255);
 				g = randomRGB_gen(0, 255);
@@ -253,6 +264,14 @@ function easter_egg(key){
 					  }
 				}
 			}
+}
+
+
+async function easter_egg(key){
+	if(key.keyCode == "220"){
+			var elems = document.querySelector('html');
+			document.getElementById("html").style.backgroundImage = 'none';
+			await set_color();
 			try{
 				rainbow(elems);
 			}
@@ -262,23 +281,48 @@ function easter_egg(key){
 	}
 }
 
-function rainbow(elems){
-		if (r <= 255 && g == 0 && b == 0) r++;
-		if (r == 255 && b == 0 && g <= 255) g++;
-		if (r == 255 && g == 255 && b <= 255) b++;
-		if (b == 255 && g == 255 && r > 0) r--;
-		if (r == 0 && b == 255 && g > 0)  g--;
-		if (r == 0 && g == 0 && b > 0) b--;
-		var timer = setTimeout(function() {
-			try{
-			   rainbow(elems);
-			}
-			catch(err){
-				alert('Error continuing the easter egg. Error code: ' + err.message);
-				return;
-			}
-		}, 100);
-		elems.style.backgroundColor = 'rgb('+r+','+g+','+b+')';
+var it = 0; ///increase otherwise 1 decrease
+
+async function r_id(elems){
+	if(r < 255){
+	   r++;
+	}
+	else{
+		r = 0;
+	}
+	elems.style.backgroundColor = 'rgb('+r+','+g+','+b+')';
+	return;
+}
+
+async function b_id(elems){
+	if(b < 255){
+       b++;
+	}
+	else{
+		b = 0;
+	}
+	elems.style.backgroundColor = 'rgb('+r+','+g+','+b+')';4
+	return;
+}
+
+async function g_id(elems){
+	if(g < 255){
+		g++;
+	}
+	else{
+		g = 0;
+	}
+	elems.style.backgroundColor = 'rgb('+r+','+g+','+b+')';
+	return;
+}
+
+async function rainbow(elems){
+	 await r_id(elems);
+     await b_id(elems);
+     await g_id(elems);
+	 var timer = setTimeout(function() {
+		 rainbow(elems);
+	 }, 100);
 }
 
 window.addEventListener("keydown", easter_egg, false);
