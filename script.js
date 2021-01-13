@@ -256,7 +256,7 @@ async function set_color(){
 				   b = randomRGB(0, 255);
 				}
 				catch(err){
-					  if(isIE10older == true || isIE11 == true){
+					  if(isIE10older == true || isIE11 == true || isEdge_nochr == true){
 						  			///we are still on ie11, just to not see the upperhanding code
 					  }
 					  else{
